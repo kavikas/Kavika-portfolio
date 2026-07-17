@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #0A0A0A;
+    --bg-card: #161513;
+    --bg-card-hover: #1E1C19;
+    --border-subtle: #2A2724;
+    --gold-primary: #C9A467;
+    --gold-bright: #E8C989;
+    --text-primary: #F5F3EE;
+    --text-secondary: #A9B4BE;
+    --text-muted: #6B6963;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-primary text-text-secondary antialiased overflow-x-hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-primary font-serif font-normal;
+  }
+  
+  ::selection {
+    background-color: rgba(201, 164, 103, 0.3);
+    color: var(--gold-bright);
+  }
+}
+
+@layer utilities {
+  .text-stroke {
+    -webkit-text-stroke: 1px var(--text-muted);
+    color: transparent;
+  }
+  
+  .text-stroke-gold {
+    -webkit-text-stroke: 1px var(--gold-primary);
+    color: transparent;
+  }
+  
+  .shadow-gold-glow {
+    box-shadow: 0 0 40px rgba(201,164,103,0.25);
+  }
+}
